@@ -2,7 +2,7 @@ package com.roberto.helpdesk.domain.enums;
 
 public enum Prioridade {
 	
-	ADMIN(0, "ROLE_ADMIN"), CLIENTE(1, "ROLE_CLIENTE"), TECNICO(2, "ROLE_TECNICO");
+	BAIXA(0, "ROLE_BAIXA"), MEDIA(1, "ROLE_MEDIA"), ALTA(2, "ROLE_ALTA");
 	
 	private Integer codigo;
 	private String descricao;
@@ -31,7 +31,7 @@ public enum Prioridade {
 			}
 		}
 		
-		throw new IllegalArgumentException("Perfil inválido");
+		throw new IllegalArgumentException("Prioridade inválido");
 	}
 
 }
