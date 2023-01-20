@@ -1,4 +1,4 @@
-package com.roberto.helpdesk.dtos;
+package com.roberto.helpdesk.domain.dtos;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -9,10 +9,10 @@ import java.util.stream.Collectors;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.roberto.helpdesk.domain.Cliente;
+import com.roberto.helpdesk.domain.Tecnico;
 import com.roberto.helpdesk.domain.enums.Perfil;
 
-public class ClienteDTO implements Serializable {
+public class TecnicoDTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -34,12 +34,12 @@ public class ClienteDTO implements Serializable {
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	protected LocalDate dataCriacao = LocalDate.now();
 
-	public ClienteDTO() {
+	public TecnicoDTO() {
 		super();
 		addPerfil(Perfil.CLIENTE);
 	}
 
-	public ClienteDTO(Cliente obj) {
+	public TecnicoDTO(Tecnico obj) {
 		super();
 		this.id = obj.getId();
 		this.nome = obj.getNome();

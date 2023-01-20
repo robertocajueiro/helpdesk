@@ -9,7 +9,7 @@ import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.roberto.helpdesk.domain.enums.Perfil;
-import com.roberto.helpdesk.dtos.ClienteDTO;
+import com.roberto.helpdesk.domain.dtos.ClienteDTO;
 
 @Entity
 public class Cliente extends Pessoa {
